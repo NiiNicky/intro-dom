@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o DOM</title>
+</head>
+<body>
+    <header>
+        <h1> Conhecendo o DOM </h1>
+    </header>
+
+    <main>
+        <section>
+            <h2> O que é o DOM? </h2>
+            <p> DOM significa <strong> Document Object Model </strong>. </p>
+            <p> É uma representação do documento HTML em forma de objetos, organizada em uma estrutura hieráquica de árvore conhecida como DOM tree.</p>
+
+            <figcaption>
+                <img src="example-dom-tree.svg" alt="representação do documento object model">
+            </figcaption> Exemplo de DOM tree (árvore do DOM) - foto: Google
+            <p> Note que cada elemento HTML está conectado. Chamados esses elementos do nó (node) dentro dessa estrutura.</p>
+            <p> Em outras palavras, o navegador basicamente transforma o HTML em uma estrutura que o JavaScript consegue acessar e manipular.</p>
+        </section>
+
+        <section>
+            <h2> Para que serve o DOM? </h2>
+            <p> O DOM permite que o JavaScript interaja com os elementos HTML. Exemplos:
+            </p>
+            <ul>
+                <li> <strong>Selecionar elementos</strong>: Encontrar botão</li>
+                <li> <strong>Alterar conteúdo</strong>: Alterar o texto de um paragrafo, titulo, etc</li>
+                <li> <strong>Alterar estilo</strong>: Altera a cor de um botão, tamanho da fonte, etc</li>
+                <li> <strong>Criar elementos</strong>: Cria novo paragrafo, botão, links, etc</li>
+                <li> <strong>Remover elementos</strong>: Remover paragrafo, botão, links, etc</li>
+                <li> <strong>Capturar eventos</strong>: dectectar cliques, teclas pressionadas, etc</li>
+                <li> <strong>Modificar atributos</strong>: Alterar um src, um arial-label, etc</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; 2024 - Todos os direitos reservados - Nicky Menezes | 2026 </p>
+    </footer>
+
+    <script>
+        console.log("Olá, DOM!");
+    </script>
+</body>
+</html>
