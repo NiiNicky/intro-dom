@@ -37,6 +37,26 @@
                 <li> <strong>Modificar atributos</strong>: Alterar um src, um arial-label, etc</li>
             </ul>
         </section>
+
+        <section>
+            <div class="conteiner-contador">
+                <h2> Exemplo com contador </h2>
+                <p id="contador">0</p>
+                <button id="aumentar">Aumentar</button>
+                <button id="diminuir">Diminuir</button>
+                <p id="mensagem"></p>
+            </div>
+        </section>
+        
+        <section class="criar-elementos">
+             <h2> Criando elementos </h2>
+             <form> 
+                <label for="tarefa">Digite sua tarefa:</label>
+                <input type="text" id="tarefa" name="tarefa" placeholder="Digite a sua tarefa">
+             </form>
+             <button id="adicionar-item">Adicionar item</button>
+             <ul id="lista"></ul>
+        </section>
     </main>
 
     <footer>
@@ -44,7 +64,54 @@
     </footer>
 
     <script>
-        console.log("Olá, DOM!");
+        const title = document.getElementById('title');
+        title.textContent = 'Aprendendo DOM';
+        title.innerHTML = 'Aprendendo o <em>DOM</em>';
+        title.style.color = '#1385f7';
+
+        //capturando mais de um elemento
+        const sections = document.querySelectorAll('section');
+        sections.forEach((section) => {
+            section.style.backgroundColor = '#09f7';
+        })
+
+        //buttons
+        const btnAumentar = document.querySelector("#Aumentar");
+        const btnDiminuir = document.querySelector("#Diminuir");
+        const mensagem = document.querySelector("#Mensagem");
+        const contador = document.querySelector("#Contador");
+
+        let valor = 0;
+        btnAumentar.addEventListener("click", () => {
+            if (valor > 0) {
+                valor--;
+                contador.textContent = valor;
+                mensagem.textContent = "Valor aumentado com sucesso!";
+            }
+        })
+
+        btnDiminuir.addEventListener("click", () => {
+           let valor = 0;
+            if (valor > 0) {
+                valor--;
+                contador.textContent = valor;
+                mensagem.textContent = "Valor diminuido com sucesso!";
+            } else {
+                mensagem.textContent = "O valor não pode ser menor que 0";
+            }
+        })
+
+
+        //criando elementos
+        const btnAdicionarItem = document.getElementById("Adicionar-item");
+        const lista = document.getElementById("Lista");
+
+        btnAdicionarItem.addEventListener("click", () =>{
+            const novoItem = document.createElement("li");
+            const item = prompt("Digite o nome do item:");
+            novoItem.textContent = item;
+            lista.appendChild(novoItem);
+        })
     </script>
 </body>
 </html>
