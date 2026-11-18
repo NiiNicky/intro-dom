@@ -101,6 +101,22 @@ header {
   transform: translateY(0);
 }
 
+.modal[open] {
+  animation: modal-aberto 3000ms ease-in forwards;
+}
+
+@keyframes modal-aberto {
+  from {
+    opacity: 0;
+    transform: translateY(2rem) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @media screen and (min-width: 48rem) {
   .menu {
     position: static;
