@@ -38,6 +38,29 @@
     </nav>
   </header>
 
+  <dialog id="modal-inscricao" class="modal">
+    <button type="button" class="modal-fechar" aria-label="Fechar modal"> X </button>
+
+    <div class="modal-conteudo"><span>NEWSLETTER</span>
+      
+      <h2> Fique por dentro! </h2>
+      <p> Inscreva-se para receber novidades, conteúdos e dicas diretamente no seu email. </p>
+
+      <form id="form-inscricao">
+        <div>
+          <label for="nome">Seu nome:</label>
+          <input type="text" name="nome" id="nome" placeholder="ex: Maria" required>
+        </div>
+
+        <div>
+          <label for="email">Seu email:</label>
+          <input type="email" name="email" id="email" placeholder="ex: mariaemail@email.com" required>
+        </div>
+
+        <button type="submit" class="modal-submit"> Quero me inscrever </button>
+      </form>
+  </dialog>
+
 </body>
 
 <script src="menu-hamburger.js"></script>
